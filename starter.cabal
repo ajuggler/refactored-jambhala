@@ -1,5 +1,5 @@
 cabal-version:      3.0
-name:               jambhala
+name:               starter
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
@@ -10,8 +10,8 @@ version:            0.1.0.0
 
 license:            MIT
 license-file:       LICENSE
-author:             Ian Burzynski
-maintainer:         23251244+iburzynski@users.noreply.github.com
+author:             Antonio Hernandez
+maintainer:         antoniohg@me.com
 
 flag defer-plugin-errors
   description:
@@ -104,4 +104,4 @@ executable jamb
   ghc-options:
     -Werror -threaded -rtsopts -with-rtsopts=-T
   build-depends:
-    jambhala
+    starter

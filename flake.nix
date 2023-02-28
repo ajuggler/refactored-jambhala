@@ -17,7 +17,7 @@
       overlays = [ haskellNix.overlay
         (final: prev: {
           # This overlay adds our project to pkgs
-          jambhala =
+          starter =
             final.haskell-nix.project' {
               src = ./.;
               compiler-nix-name = "ghc8107";
@@ -38,11 +38,11 @@
         })
       ];
       pkgs = import nixpkgs { inherit system overlays; inherit (haskellNix) config; };
-      flake = pkgs.jambhala.flake {
+      flake = pkgs.starter.flake {
       };
     in flake // {
       # Built by `nix build .`
-      packages.default = flake.packages."jambhala:exe:jamb";
+      packages.default = flake.packages."starter:exe:jamb";
     });
 
   # nixConfig = {
